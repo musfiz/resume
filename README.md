@@ -179,19 +179,6 @@ Both Experience and Education sections feature a modern timeline layout with:
 - DevOps & CI/CD
 - Performance Optimization
 
-## 🌐 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import project to [Vercel](https://vercel.com)
-3. Deploy with one click
-
-### Deploy to Netlify
-
-1. Build the project: `npm run build`
-2. Deploy the `out` folder to Netlify
-
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
