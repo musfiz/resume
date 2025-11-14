@@ -1,0 +1,44 @@
+{
+  "app\\page.tsx -> @/components/sections/Contact": {
+    "id": "app\\page.tsx -> @/components/sections/Contact",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_sections_Contact_tsx.js"
+    ]
+  },
+  "app\\page.tsx -> @/components/sections/Education": {
+    "id": "app\\page.tsx -> @/components/sections/Education",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_sections_Education_tsx.js"
+    ]
+  },
+  "app\\page.tsx -> @/components/sections/Experience": {
+    "id": "app\\page.tsx -> @/components/sections/Experience",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_sections_Experience_tsx.js"
+    ]
+  },
+  "app\\page.tsx -> @/components/sections/Home": {
+    "id": "app\\page.tsx -> @/components/sections/Home",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_sections_Home_tsx.js"
+    ]
+  },
+  "app\\page.tsx -> @/components/sections/Projects": {
+    "id": "app\\page.tsx -> @/components/sections/Projects",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_sections_Projects_tsx.js"
+    ]
+  },
+  "app\\page.tsx -> @/components/sections/Services": {
+    "id": "app\\page.tsx -> @/components/sections/Services",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_sections_Services_tsx.js"
+    ]
+  },
+  "app\\page.tsx -> @/components/sections/Technology": {
+    "id": "app\\page.tsx -> @/components/sections/Technology",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_sections_Technology_tsx.js"
+    ]
+  }
+}
