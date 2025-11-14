@@ -179,16 +179,6 @@ Both Experience and Education sections feature a modern timeline layout with:
 - DevOps & CI/CD
 - Performance Optimization
 
-### Technology Stack Display
-
-Interactive grid with 18+ technologies including:
-
-- JavaScript, TypeScript, Python
-- React, Next.js, Node.js
-- MongoDB, PostgreSQL, MySQL
-- Docker, Git, AWS
-- And more...
-
 ## 🌐 Deployment
 
 ### Deploy to Vercel (Recommended)
@@ -211,7 +201,7 @@ This project is open source and available under the [MIT License](LICENSE).
 **Mustafizur Rahman**
 
 - GitHub: [@musfiz](https://github.com/musfiz)
-- Portfolio: [Live Demo](https://your-portfolio-url.com)
+- Portfolio: [Live Demo](https://musfiz.com)
 
 ## 🤝 Contributing
 
