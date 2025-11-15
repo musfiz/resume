@@ -31,9 +31,9 @@ export default function Experience() {
                     <span className="text-gray-500 dark:text-gray-400 mt-2 md:mt-0 font-semibold">2021 - Present</span>
                   </div>
                   <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-                    <li>Led development of enterprise-level web applications</li>
-                    <li>Mentored junior developers and conducted code reviews</li>
-                    <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                    <li>Architected scalable software solutions for complex business problems</li>
+                    <li>Led cross-functional teams in agile development methodologies</li>
+                    <li>Enhanced system performance and reliability through code optimization</li>
                   </ul>
                 </div>
               </div>
@@ -79,9 +79,9 @@ export default function Experience() {
                     <span className="text-gray-500 dark:text-gray-400 mt-2 md:mt-0 font-semibold">2017 - 2020</span>
                   </div>
                   <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-                    <li>Collaborated on front-end development projects</li>
+                    <li>Collaborated on back-end development projects</li>
                     <li>Participated in agile development processes</li>
-                    <li>Created reusable component libraries</li>
+                    <li>Written complex business logic to web application</li>
                   </ul>
                 </div>
               </div>
@@ -103,9 +103,9 @@ export default function Experience() {
                     <span className="text-gray-500 dark:text-gray-400 mt-2 md:mt-0 font-semibold">2015 - 2017</span>
                   </div>
                   <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-                    <li>Collaborated on front-end development projects</li>
-                    <li>Participated in agile development processes</li>
-                    <li>Created reusable component libraries</li>
+                    <li>Supported development of responsive user interfaces and maintained existing web applications</li>
+                    <li>Collaborated with senior developers to implement features</li>
+                    <li>Fix bugs, and improve code quality while gaining experience with modern web technologies and version control workflows.</li>
                   </ul>
                 </div>
               </div>

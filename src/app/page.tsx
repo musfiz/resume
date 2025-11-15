@@ -42,7 +42,7 @@ const Contact = dynamic(() => import('@/components/sections/Contact'), {
 });
 
 export default function PortfolioPage() {
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
+    const [theme, setTheme] = useState<'light' | 'dark'>('dark');
     const [isMounted, setIsMounted] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
