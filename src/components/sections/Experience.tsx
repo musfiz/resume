@@ -32,7 +32,7 @@ export default function Experience() {
                   </div>
                   <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
                     <li>Architected scalable software solutions for complex business problems</li>
-                    <li>Led cross-functional teams in agile development methodologies</li>
+                    <li>Lead cross-functional teams in agile development methodologies</li>
                     <li>Enhanced system performance and reliability through code optimization</li>
                   </ul>
                 </div>
@@ -76,7 +76,7 @@ export default function Experience() {
                       <h3 className="text-2xl font-bold">Web Developer</h3>
                       <p className="text-blue-500 font-semibold">Nano Information Technology(Nanosoft)</p>
                     </div>
-                    <span className="text-gray-500 dark:text-gray-400 mt-2 md:mt-0 font-semibold">2017 - 2020</span>
+                    <span className="text-gray-500 dark:text-gray-400 mt-2 md:mt-0 font-semibold">2019 - 2020</span>
                   </div>
                   <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
                     <li>Collaborated on back-end development projects</li>
@@ -87,13 +87,10 @@ export default function Experience() {
               </div>
 
               {/* Experience 4 */}
-              <div className="relative pl-20">
-                {/* Icon */}
+              {/* <div className="relative pl-20">
                 <div className="absolute left-0 top-0 w-16 h-16 bg-gradient-to-br from-red-500 to-rose-600 rounded-full flex items-center justify-center shadow-lg">
                   <Briefcase className="w-8 h-8 text-white" />
                 </div>
-
-                {/* Content */}
                 <div className="experience-card">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
@@ -108,7 +105,7 @@ export default function Experience() {
                     <li>Fix bugs, and improve code quality while gaining experience with modern web technologies and version control workflows.</li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
