@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Menu as BarsIcon, X as XMarkIcon } from 'lucide-react';
 
@@ -45,13 +47,19 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isScrolled }) => {
     };
 
     return (
-        <header id="header" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'scrolled' : ''}`}>
+        <header
+            id="header"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+                bg-white/80 dark:bg-slate-950/80 backdrop-blur-md
+                border-b border-gray-200 dark:border-slate-800
+                ${isScrolled ? 'shadow-md' : ''}`}
+        >
             <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                         <span className="text-white font-bold text-xl">MR</span>
                     </div>
-                    <span className="text-xl font-bold">Mustafizur Rahman</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">Mustafizur Rahman</span>
                 </div>
 
                 <ul className="hidden md:flex space-x-8">
@@ -60,7 +68,12 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isScrolled }) => {
                             <a
                                 href={item.href}
                                 onClick={handleNavLinkClick}
-                                className={`nav-link hover:text-blue-500 transition-colors ${activeSection === item.href.substring(1) ? 'active' : ''}`}
+                                className={`relative font-medium cursor-pointer transition-colors duration-200
+                                    hover:text-blue-500
+                                    ${activeSection === item.href.substring(1)
+                                        ? 'text-blue-500'
+                                        : 'text-gray-700 dark:text-slate-300'
+                                    }`}
                             >
                                 {item.label}
                             </a>
@@ -68,7 +81,13 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isScrolled }) => {
                     ))}
                 </ul>
 
-                <button id="mobile-menu-btn" className="md:hidden text-2xl" onClick={toggleMobileMenu} aria-label="Toggle menu" aria-expanded={isMobileMenuOpen}>
+                <button
+                    id="mobile-menu-btn"
+                    className="md:hidden text-gray-700 dark:text-slate-300 hover:text-blue-500 transition-colors"
+                    onClick={toggleMobileMenu}
+                    aria-label="Toggle menu"
+                    aria-expanded={isMobileMenuOpen}
+                >
                     {isMobileMenuOpen ? <XMarkIcon className="w-6 h-6" /> : <BarsIcon className="w-6 h-6" />}
                 </button>
             </nav>
@@ -80,7 +99,11 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isScrolled }) => {
                             <a
                                 href={item.href}
                                 onClick={handleNavLinkClick}
-                                className={`nav-link block py-2 hover:text-blue-500 transition-colors ${activeSection === item.href.substring(1) ? 'active' : ''}`}
+                                className={`block py-2 font-medium transition-colors hover:text-blue-500
+                                    ${activeSection === item.href.substring(1)
+                                        ? 'text-blue-500'
+                                        : 'text-gray-700 dark:text-slate-300'
+                                    }`}
                             >
                                 {item.label}
                             </a>

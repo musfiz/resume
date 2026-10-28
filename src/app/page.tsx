@@ -72,10 +72,8 @@ export default function PortfolioPage() {
     };
 
     const handleScroll = useCallback(() => {
-        // Header scroll effect
         setIsScrolled(window.scrollY > 50);
 
-        // Active section highlighting
         const sections = document.querySelectorAll('section');
         const headerHeight = document.getElementById('header')?.offsetHeight || 0;
         let currentSection = '';
@@ -92,13 +90,12 @@ export default function PortfolioPage() {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Set initial state on mount
+        handleScroll();
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [handleScroll]);
 
-    // Prevent rendering until theme is determined to avoid flash of wrong theme
     if (!isMounted) {
         return null;
     }
@@ -118,8 +115,8 @@ export default function PortfolioPage() {
                 <Contact />
             </main>
 
-            <footer className="py-8 text-center border-t">
-                <p className="text-gray-600 dark:text-gray-400">
+            <footer className="py-8 text-center border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-900/50">
+                <p className="text-gray-600 dark:text-slate-400">
                     © 2025 Mustafizur Rahman. All rights reserved.
                 </p>
             </footer>
