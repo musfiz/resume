@@ -1,211 +1,150 @@
-# 🚀 Full Stack Developer Portfolio
+# 🚀 Mustafizur Rahman — Senior Software Engineer Portfolio
 
-A modern, responsive, and feature-rich portfolio website built with Next.js 14, React, TypeScript, and Tailwind CSS. This portfolio showcases professional experience, technical skills, projects, and services with an elegant dark/light theme and smooth animations.
+A modern, high-performance developer portfolio and resume web application built with **Next.js 16**, **React 19**, **TypeScript**, and **Tailwind CSS v4**.
 
-![Portfolio Preview](https://img.shields.io/badge/Next.js-14.2.15-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-38B2AC?style=for-the-badge&logo=tailwind-css)
+Designed with a dual-influence aesthetic combining the sticky personal sidebar and dark-mode foundation of **Taqui Imam** with the glassmorphism card architecture, ambient dot-grid, and typography of **Chanh Dai**.
 
-## ✨ Features
+---
 
-### 🎨 Modern UI/UX
+## 🎨 UI/UX Design System
 
-- **Dark/Light Theme Toggle** - Seamless theme switching with persistent storage
-- **Responsive Design** - Optimized for all devices (mobile, tablet, desktop)
-- **Smooth Animations** - Hover effects, transitions, and scroll-based interactions
-- **Gradient Accents** - Beautiful gradient backgrounds and icon styling
-- **Glass Morphism** - Modern backdrop blur effects on header
+- **Layout Architecture**: Two-column layout on desktop featuring a sticky profile card with quick actions, metric counters, and vertical section navigation, alongside a main content stream.
+- **Glassmorphism**: Backdrop blur cards with border highlights and accent glows.
+- **Theme Support**: Seamless Dark/Light theme switching with persistent `localStorage` support (defaults to dark base `#0b0f17`).
+- **Typography**: Powered by Vercel's **Geist** (headings & body) and **Geist Mono** (technical labels, badges, numbers).
+- **Color Palette**: Dark slate base (`#0b0f17`), emerald accent (`#00c758`), teal (`#14b8a6`), and slate glass overlays.
+- **Responsive Navigation**: Scroll-aware sticky top navigation with active section detection, reduced transparency on scroll, and a mobile drawer.
 
-### 📱 Sections
+---
 
-1. **Home** - Hero section with profile image, social links, and CTA
-2. **Technology** - Interactive tech stack showcase with 18+ technologies using Devicon
-3. **Experience** - Professional timeline design with gradient icons
-4. **Education** - Academic background with timeline layout and achievement badges
-5. **Services** - 8 comprehensive full-stack development services with animated cards
-6. **Projects** - Portfolio showcase with project cards and external links
-7. **Contact** - Contact form with social media integration
+## 📱 Portfolio Sections
 
-### ⚡ Performance Optimizations
+1. **Profile Sidebar** — Sticky desktop card with avatar, live availability status pill, quick contact buttons, resume download, metrics counter strip, and vertical navigation.
+2. **About & Overview (`#about`)** — Executive narrative, 4-metric highlight strip (10+ Yrs Exp, 30+ Projects, 18+ Techs, 100% Client Satisfaction), and 4 core architectural focus pillars.
+3. **Technologies (`#technology`)** — Interactive tech stack with category filtering (*All, Frontend, Backend, Database, DevOps & Cloud, Mobile*) using Devicon vector logos and proficiency levels.
+4. **Experience (`#experience`)** — Vertical timeline featuring company names, tenures, impact bullet points, and technology tags.
+5. **Projects (`#projects`)** — Filterable project grid with category tabs (*All, Enterprise, Full Stack, E-Commerce, Cloud*), featured badges, external links, and tech tags.
+6. **Services (`#services`)** — 8 comprehensive engineering capabilities with icon cards and deliverables checklists.
+7. **Education (`#education`)** — Academic qualifications (Master's & Bachelor's in CSE) with distinction awards.
+8. **Recommendations (`#recommendations`)** — Client and engineering leadership testimonials.
+9. **Contact (`#contact`)** — Direct contact cards with one-click clipboard copy for email and phone, timezone/location, availability banner, and interactive message form.
 
-- **Lazy Loading** - Dynamic imports for all sections using `next/dynamic`
-- **Code Splitting** - Separated components for optimal bundle size
-- **SSR/SSG** - Server-side rendering for SEO optimization
-- **Optimized Images** - Next.js Image component with remote patterns
-
-### 🎯 Key Highlights
-
-- **TypeScript** - Full type safety across the application
-- **Modern Icons** - Lucide React icons for UI elements
-- **Devicon Integration** - Technology logos for tech stack visualization
-- **SCSS/CSS Modules** - Custom styling with CSS variables for theming
-- **Active Section Tracking** - Dynamic navigation highlighting based on scroll position
-- **Mobile-Friendly Navigation** - Hamburger menu for mobile devices
+---
 
 ## 🛠️ Tech Stack
 
-### Frontend
+### Core Technologies
+- **Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
+- **Library:** [React 19](https://react.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) + PostCSS
+- **Fonts:** [Geist & Geist Mono](https://vercel.com/font) via `next/font/google`
+- **Icons:** [Lucide React](https://lucide.dev/) + [Devicon](https://devicon.dev/)
 
-- **Framework:** Next.js 14.2.15 (React 18)
-- **Language:** TypeScript 5
-- **Styling:** Tailwind CSS 3.4.1 + SCSS/Sass 1.77.2
-- **Icons:** Lucide React 0.553.0 + Devicon 2.17.0
+---
 
-### Development Tools
-
-- **Package Manager:** npm
-- **Linting:** ESLint 8
-- **CSS Processing:** PostCSS + Autoprefixer
-- **Build Tool:** Next.js built-in compiler
-
-## 📦 Project Structure
+## 📁 Project Structure
 
 ```
-portfolio/
+resume/
 ├── public/
-│   └── dev.png                    # Profile image
+│   ├── dev.png                   # Profile picture
+│   ├── cims.png                  # Project screenshot: CIMS
+│   ├── erp.png                   # Project screenshot: ERP
+│   └── Mustafizur_Rahman.pdf     # Downloadable Resume / CV
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx             # Root layout with metadata
-│   │   └── page.tsx               # Main portfolio page
+│   │   ├── layout.tsx            # Root layout, Geist font setup, metadata
+│   │   └── page.tsx              # Main page, 2-column layout, scroll spy
 │   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Navbar.tsx        # Top navbar with theme toggle & mobile menu
+│   │   │   └── Sidebar.tsx       # Sticky personal sidebar & vertical nav
+│   │   ├── ui/
+│   │   │   ├── SectionCard.tsx   # Glassmorphism section container
+│   │   │   └── Badge.tsx         # Monospace tag pill component
 │   │   ├── sections/
-│   │   │   ├── Home.tsx           # Hero section
-│   │   │   ├── Technology.tsx     # Tech stack section
-│   │   │   ├── Experience.tsx     # Work experience timeline
-│   │   │   ├── Education.tsx      # Education timeline
-│   │   │   ├── Services.tsx       # Services offered
-│   │   │   ├── Projects.tsx       # Project showcase
-│   │   │   └── Contact.tsx        # Contact form
-│   │   ├── Header.tsx             # Navigation header
-│   │   └── ThemeToggle.tsx        # Dark/light mode toggle
-│   └── main.scss                  # Global styles & CSS variables
-├── tailwind.config.ts             # Tailwind configuration
-├── next.config.mjs                # Next.js configuration
-├── tsconfig.json                  # TypeScript configuration
-└── package.json                   # Dependencies & scripts
+│   │   │   ├── Home.tsx          # About & overview section
+│   │   │   ├── Technology.tsx    # Filterable tech stack showcase
+│   │   │   ├── Experience.tsx    # Work history timeline
+│   │   │   ├── Projects.tsx      # Project showcase with category filters
+│   │   │   ├── Services.tsx      # 8 full-stack engineering services
+│   │   │   ├── Education.tsx     # Academic qualifications
+│   │   │   ├── Testimonials.tsx  # Endorsements & recommendations
+│   │   │   └── Contact.tsx       # Contact info, copy buttons & form
+│   │   ├── Header.tsx            # Header adapter
+│   │   └── ThemeToggle.tsx       # Floating theme toggle button
+│   ├── data/
+│   │   └── portfolioData.ts      # Centralized typed data source
+│   └── globals.css               # Tailwind v4 theme, dot-grid & glass styles
+├── next.config.mjs               # Next.js export & image configuration
+├── package.json
+└── tsconfig.json
 ```
+
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
-- **Node.js** (v18 or higher recommended)
-- **npm** or **yarn**
+- **Node.js** (v18.18 or higher recommended)
+- **npm** or **yarn** / **pnpm**
 
 ### Installation
 
-1. **Clone the repository**
-
+1. Clone the repository:
    ```bash
    git clone https://github.com/musfiz/resume.git
    cd resume
    ```
 
-2. **Install dependencies**
-
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Run the development server**
-
+3. Run the development server:
    ```bash
    npm run dev
    ```
 
-4. **Open your browser**
-   ```
-   Navigate to http://localhost:3000
-   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Build for Production
+### Production Build
 
 ```bash
-# Create optimized production build
+# Build optimized static export
 npm run build
 
 # Start production server
-npm start
+npm run start
 ```
 
-### Linting
+---
 
-```bash
-npm run lint
-```
+## ⚙️ Customizing Content
 
-## 🎨 Customization
+All portfolio content is decoupled from components and managed in a single typed file:
 
-### Update Personal Information
+- **Edit personal details, bio, metrics, projects, experience, services & contact:**
+  Modify `src/data/portfolioData.ts`.
+- **Replace profile picture:**
+  Replace `public/dev.png`.
+- **Replace resume document:**
+  Replace `public/Mustafizur_Rahman.pdf`.
 
-- Edit section components in `src/components/sections/`
-- Replace profile image in `public/dev.png`
-- Update social links in `Home.tsx`
-
-### Modify Theme Colors
-
-- Edit CSS variables in `src/main.scss`
-- Customize Tailwind colors in `tailwind.config.ts`
-
-### Add/Remove Sections
-
-- Create new section components in `src/components/sections/`
-- Import and add to `src/app/page.tsx`
-- Update navigation in `src/components/Header.tsx`
-
-## 📋 Features in Detail
-
-### Timeline Design
-
-Both Experience and Education sections feature a modern timeline layout with:
-
-- Vertical gradient line connecting timeline items
-- Gradient circular icons with shadow effects
-- Responsive card design
-- Hover animations
-
-### Services Grid
-
-8-column responsive grid showcasing:
-
-- Frontend Development (React, Next.js, Vue)
-- Backend Development (Node.js, Express, NestJS)
-- Database Design (PostgreSQL, MongoDB, MySQL)
-- Cloud Services (AWS, Azure, Google Cloud)
-- Mobile Development (React Native, PWA)
-- Microservices Architecture
-- DevOps & CI/CD
-- Performance Optimization
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+---
 
 ## 👤 Author
 
 **Mustafizur Rahman**
-
-- GitHub: [@musfiz](https://github.com/musfiz)
-- Portfolio: [Live Demo](https://musfiz.com)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## ⭐ Show your support
-
-Give a ⭐️ if this project helped you!
+- **Role:** Senior Software Engineer @ BJIT
+- **Website:** [musfiz.com](https://musfiz.com)
+- **LinkedIn:** [linkedin.com/in/musfiz](https://linkedin.com/in/musfiz)
+- **GitHub:** [@musfiz](https://github.com/musfiz)
 
 ---
 
-<div align="center">
-  Made with ❤️ using Next.js and TypeScript
-</div>
+## 📄 License
+
+This project is open-source under the [MIT License](LICENSE).

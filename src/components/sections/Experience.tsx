@@ -1,102 +1,83 @@
-import React from 'react';
-import { Briefcase } from 'lucide-react';
+'use client';
 
-const experiences = [
-  {
-    title: 'Sr. Software Engineer',
-    company: 'Bangladesh Japan Information Technology (BJIT)',
-    period: '2021 - Present',
-    gradient: 'from-teal-500 to-blue-600',
-    points: [
-      'Architected scalable software solutions for complex business problems',
-      'Led cross-functional teams in agile development methodologies',
-      'Enhanced system performance and reliability through code optimization',
-    ],
-  },
-  {
-    title: 'Software Engineer',
-    company: 'Bangladesh Japan Information Technology (BJIT)',
-    period: '2020 - 2021',
-    gradient: 'from-indigo-500 to-violet-600',
-    points: [
-      'Developed RESTful APIs and microservices architecture',
-      'Built responsive web applications using React and Node.js',
-      'Optimized database queries improving performance by 40%',
-    ],
-  },
-  {
-    title: 'Web Developer',
-    company: 'Nano Information Technology (Nanosoft)',
-    period: '2017 - 2020',
-    gradient: 'from-violet-500 to-pink-600',
-    points: [
-      'Collaborated on back-end development projects',
-      'Participated in agile development processes',
-      'Written complex business logic to web application',
-    ],
-  },
-  {
-    title: 'Jr. Web Developer',
-    company: 'Dynamic Software Ltd',
-    period: '2015 - 2017',
-    gradient: 'from-red-500 to-rose-600',
-    points: [
-      'Supported development of responsive user interfaces and maintained existing web applications',
-      'Collaborated with senior developers to implement features',
-      'Fixed bugs and improved code quality while gaining experience with modern web technologies and version control workflows.',
-    ],
-  },
-];
+import React from 'react';
+import SectionCard from '@/components/ui/SectionCard';
+import { portfolioData } from '@/data/portfolioData';
+import { Briefcase, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
 
 export default function Experience() {
+  const { experiences } = portfolioData;
+
   return (
-    <section id="experience" className="min-h-screen py-20 bg-white dark:bg-slate-950">
-      <div className="container mx-auto px-6">
+    <SectionCard
+      id="experience"
+      tagNumber="03"
+      tagLabel="Career Journey"
+      title="Work Experience"
+      subtitle="A track record of technical impact, from junior web development to senior software engineering leadership."
+    >
+      <div className="relative pl-6 sm:pl-8 space-y-8 before:absolute before:left-2 sm:before:left-3 before:top-3 before:bottom-3 before:w-0.5 before:bg-gradient-to-b before:from-emerald-500 before:via-teal-500 before:to-slate-300 dark:before:to-slate-800">
+        {experiences.map((exp, index) => (
+          <div key={index} className="relative group">
+            {/* Timeline Node Dot */}
+            <div className="absolute -left-6 sm:-left-8 top-1.5 w-4 sm:w-5 h-4 sm:h-5 rounded-full border-2 border-emerald-500 bg-white dark:bg-slate-900 shadow-md group-hover:scale-125 transition-transform duration-200 flex items-center justify-center">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            </div>
 
-        {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
-            Experience
-          </h2>
-          <div className="mt-4 mx-auto w-24 h-1 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600" />
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Vertical timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-lime-500 via-teal-500 to-pink-500" />
-
-            <div className="space-y-12">
-              {experiences.map((exp, i) => (
-                <div key={i} className="relative pl-20">
-                  {/* Circle icon */}
-                  <div className={`absolute left-0 top-0 w-16 h-16 bg-gradient-to-br ${exp.gradient} rounded-full flex items-center justify-center shadow-lg`}>
-                    <Briefcase className="w-8 h-8 text-white" />
-                  </div>
-
-                  {/* Card */}
-                  <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-8 transition-all duration-300 hover:translate-x-1.5 hover:shadow-xl">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{exp.title}</h3>
-                        <p className="text-blue-500 font-semibold">{exp.company}</p>
-                      </div>
-                      <span className="text-gray-500 dark:text-slate-400 mt-2 md:mt-0 font-semibold text-sm">
-                        {exp.period}
-                      </span>
-                    </div>
-                    <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-slate-400">
-                      {exp.points.map((pt, j) => (
-                        <li key={j}>{pt}</li>
-                      ))}
-                    </ul>
+            {/* Experience Card */}
+            <div className="glass-card glass-card-hover rounded-2xl p-5 sm:p-7 border border-slate-200/80 dark:border-slate-800/80 space-y-4">
+              {/* Header Info */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-3 border-b border-slate-200/60 dark:border-slate-800/60">
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                    <span>{exp.title}</span>
+                  </h3>
+                  <div className="text-emerald-600 dark:text-emerald-400 font-semibold text-sm mt-0.5 flex items-center gap-2">
+                    <Briefcase className="w-4 h-4" />
+                    <span>{exp.company}</span>
                   </div>
                 </div>
-              ))}
+
+                <div className="flex flex-wrap items-center gap-2 font-mono text-xs">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                    <Calendar className="w-3.5 h-3.5" />
+                    <span>{exp.period}</span>
+                  </span>
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                    <MapPin className="w-3 h-3 text-slate-400" />
+                    <span>{exp.location}</span>
+                  </span>
+                </div>
+              </div>
+
+              {/* Bullet Achievements */}
+              <ul className="space-y-2.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                {exp.points.map((point, pIdx) => (
+                  <li key={pIdx} className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Technologies Applied */}
+              <div className="pt-2 flex flex-wrap items-center gap-1.5">
+                <span className="text-[11px] font-mono text-slate-400 dark:text-slate-500 uppercase mr-1">
+                  Stack:
+                </span>
+                {exp.techStack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="inline-block px-2.5 py-0.5 rounded-lg font-mono text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/80"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </SectionCard>
   );
 }
